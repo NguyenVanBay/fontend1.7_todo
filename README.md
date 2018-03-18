@@ -15,6 +15,7 @@ Link demo
 
 none-jquery.
 https://nguyenvanbay.github.io/fontend1.7_todo/index.html
+
 jquery.
 https://nguyenvanbay.github.io/fontend1.7_todo/bsindex.html
 
