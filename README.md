@@ -1,8 +1,8 @@
 # Bài tập Trainee Colombo 2018
 
-## Tiêu đề bài tập
+## Bài toán Todo List
 
- **Frontend 1.5 :   Bài toán Todo List ** .
+ **Frontend 1.7 :   Bài toán Todo List ** .
 
 "Tìm hiểu tính năng bài toán Todo List, bài toán nên thực hành khi học 1 ngôn ngữ lập trình mới
 Tự làm lại 1 phiên bản 1 bản bằng jquery và 1 bản không bằng jquery"
