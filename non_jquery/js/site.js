@@ -43,6 +43,8 @@ function AddItem() {
         list.appendChild(li);
 
         soViec();
+
+        document.getElementById("content").value = "";
     }
 }
 
