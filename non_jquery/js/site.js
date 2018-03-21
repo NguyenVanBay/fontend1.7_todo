@@ -27,7 +27,7 @@ function AddItem() {
         var btn_remove = document.createElement("a");
 
         btn_remove.addEventListener("click", function() {
-           this.parentElement.remove();
+            this.parentElement.remove();
             soViec();
         });
 
@@ -46,14 +46,24 @@ function AddItem() {
     }
 }
 
+document.getElementById("content").addEventListener('keypress', function() {
+
+    if(event.keyCode == 13){
+        AddItem();
+        soViec();
+    }
+
+});
+
+
 document.getElementById("clear").addEventListener("click", function(){
     document.getElementById("clear").classList.add("active");
     document.getElementById("active").classList.remove("active");
     document.getElementById("completed").classList.remove("active");
     document.getElementById("completedall").classList.remove("active");
     document.getElementById("all").classList.remove("active");
-    soViec();
     document.getElementById("list").innerHTML = "";
+    soViec();
 });
 
 
@@ -132,5 +142,13 @@ function soViec() {
     for (i = 0; i < input.length; i++) {
         if(!input[i].classList.contains("completed")) dem ++;
     }
+
+    if(dem > 0) {
+        document.getElementById("clear").style.display=  "block";
+    } else {
+        document.getElementById("clear").style.display = "none";
+    }
+
+
     document.getElementById("dem").innerHTML = dem + "things todo";
 }

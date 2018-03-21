@@ -1,12 +1,17 @@
 $(document).ready(function() {
-    $("#addItem").click(function() {
-        AddItem();
+
+    $("#content").keyup(function() {
+        if(event.keyCode == 13){
+            AddItem();
+            dem();
+        }
     });
 
     function AddItem() {
         var content = $("#content").val();
         $("#list").append('<li><input class="check" type="checkbox"><p>' + content + '</p><a href="#"><span class="ion-close-circled deleteItem"></span></a></li>');
         dem();
+        $("#content").val("");
     };
 
     $("body").on('click', ".deleteItem", function(){
@@ -23,6 +28,7 @@ $(document).ready(function() {
     function changeActive(a){
         $("button").removeClass("active");
         $(a).addClass("active");
+        dem();
     }
 
     $("#all").on("click", function() {
@@ -58,10 +64,16 @@ $(document).ready(function() {
         changeActive(this);
         dem();
     });
-    
+
     function dem() {
         var dem = $("li:not(.completed)").length;
         $("#dem").html(dem + " things todo");
+
+        if(dem > 0) {
+            $("#clear").show();
+        } else {
+            $("#clear").hide();
+        }
     }
 
 
