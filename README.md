@@ -14,10 +14,10 @@ Thực hiện bởi [https://github.com/NguyenVanBay]
 Link demo
 
 none-jquery.
-https://nguyenvanbay.github.io/fontend1.7_todo/index.html
+https://nguyenvanbay.github.io/fontend1.7_todo/non_jquery/
 
 jquery.
-https://nguyenvanbay.github.io/fontend1.7_todo/bsindex.html
+https://nguyenvanbay.github.io/fontend1.7_todo/jquery/
 
 
 ## Kiến thức nắm được
