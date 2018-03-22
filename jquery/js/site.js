@@ -60,7 +60,7 @@ $(document).ready(function() {
     });
 
     $("#clear").on("click", function() {
-        $("ul").html("");
+        $(".completed").remove();
         changeActive(this);
         dem();
     });
@@ -69,12 +69,19 @@ $(document).ready(function() {
         var dem = $("li:not(.completed)").length;
         $("#dem").html(dem + " things todo");
 
-        if(dem > 0) {
+        var dem1 = $(".completed").length;
+
+        if(dem1 > 0) {
             $("#clear").show();
         } else {
             $("#clear").hide();
         }
+
+        // alert(dem1);
+        // if(dem1 > 0) {
+        //     $("#completedall").hide();
+        // } else {
+        //     $("#completedall").show();
+        // }
     }
-
-
 });
